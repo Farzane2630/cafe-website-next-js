@@ -6,6 +6,8 @@ import {
   faMapMarkerAlt,
   faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faInstagram, faLinkedin, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
+
 
 export default function Footer() {
   return (
@@ -53,25 +55,25 @@ export default function Footer() {
               className="btn btn-lg btn-outline-light btn-lg-square mr-2"
               href="#"
             >
-              <FontAwesomeIcon icon={""} className="fab fa-twitter" />
+              <FontAwesomeIcon icon={faTwitter} className="fab fa-twitter" />
             </Link>
             <Link
               className="btn btn-lg btn-outline-light btn-lg-square mr-2"
               href="#"
             >
-              <FontAwesomeIcon icon={""} className="fab fa-facebook-f" />
+              <FontAwesomeIcon icon={faFacebookF} className="fab fa-facebook-f" />
             </Link>
             <Link
               className="btn btn-lg btn-outline-light btn-lg-square mr-2"
               href="#"
             >
-              <FontAwesomeIcon icon={""} className="fab fa-linkedin-in" />
+              <FontAwesomeIcon icon={faLinkedinIn} className="fab fa-linkedin-in" />
             </Link>
             <Link
               className="btn btn-lg btn-outline-light btn-lg-square"
               href="#"
             >
-              <FontAwesomeIcon icon={""} className="fab fa-instagram" />
+              <FontAwesomeIcon icon={faInstagram} className="fab fa-instagram" />
             </Link>
           </div>
         </div>

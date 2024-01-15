@@ -11,3 +11,11 @@ export default function About() {
   );
 }
 
+
+export async function getStaticProps() {
+  console.log("SSG Page");
+  return {
+    props: {},
+  };
+}
+
