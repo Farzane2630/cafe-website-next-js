@@ -7,9 +7,33 @@ import {
   faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faInstagram, faLinkedin, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { useForm } from "react-hook-form";
+import Form from "./Form/Form";
 
 
 export default function Footer() {
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  async function addEmail(data) {
+    const res = await fetch("http://localhost:4000/newsLetters", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (res.status === 201) {
+      alert("🎉 You have Joined Successfully! ;)) ✔");
+      reset();
+    }
+  }
   return (
     <div className="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
       <div className="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
@@ -99,21 +123,13 @@ export default function Footer() {
             Newsletter
           </h4>
           <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
-          <div className="w-100">
-            <div className="input-group">
-              <input
-                type="text"
-                className="form-control border-light"
-                style={{ padding: "25px" }}
-                placeholder="Your Email"
-              />
-              <div className="input-group-append">
-                <button className="btn btn-primary font-weight-bold px-3">
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
+          <Form
+          submitForm={addEmail}
+          register={register}
+          handleSubmit={handleSubmit}
+          errors={errors}
+          reset={reset}
+        />
         </div>
       </div>
       <div
@@ -138,9 +154,3 @@ export default function Footer() {
   );
 }
 
-export async function getStaticProps() {
-  console.log("SSG Page");
-  return {
-    props: {},
-  };
-}

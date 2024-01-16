@@ -1,16 +1,16 @@
 import Link from "next/link";
-import React from "react";
-import "../../styles/Navbar.module.css"
+import React, { useState } from "react";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="container-fluid p-0 nav-bar">
       <nav className="navbar navbar-expand-lg bg-none navbar-dark py-3">
-        <Link href="index" className="navbar-brand px-lg-4 m-0">
+        <a href="/" className="navbar-brand px-lg-4 m-0">
           <h1 className="m-0 display-4 text-uppercase text-white">
-            Next-Coffee
+            WELLCOME 👋
           </h1>
-        </Link>
+        </a>
         <button
           type="button"
           className="navbar-toggler"
@@ -24,38 +24,39 @@ export default function Navbar() {
           id="navbarCollapse"
         >
           <div className="navbar-nav ml-auto p-4">
-            <Link href="/" className="nav-item nav-link active">
+            <a href="/" className="nav-item nav-link active">
               Home
-            </Link>
-            <Link href="about" className="nav-item nav-link">
+            </a>
+            <a href="about" className="nav-item nav-link">
               About
-            </Link>
-            <Link href="service" className="nav-item nav-link">
+            </a>
+            <a href="service" className="nav-item nav-link">
               Service
-            </Link>
-            <Link href="menu" className="nav-item nav-link">
+            </a>
+            <a href="menu" className="nav-item nav-link">
               Menu
-            </Link>
-            <div className="nav-item dropdown">
-              <Link
-                href="#"
-                className="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-              >
+            </a>
+            <div
+              className="nav-item dropdown"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <div className="nav-link dropdown-toggle" data-toggle="dropdown">
                 Pages
-              </Link>
-              <div className="dropdown-menu text-capitalize">
-                <Link href="reservation" className="dropdown-item">
-                  Reservation
-                </Link>
-                <Link href="testimonial" className="dropdown-item">
-                  Testimonial
-                </Link>
               </div>
+              {isOpen ? (
+                <div className="dropdown-menu text-capitalize">
+                  <a href="reservation" className="dropdown-item">
+                    Reservation
+                  </a>
+                  <a href="testimonial" className="dropdown-item">
+                    Testimonial
+                  </a>
+                </div>
+              ) : null}
             </div>
-            <Link href="contact" className="nav-item nav-link">
+            <a href="contact" className="nav-item nav-link">
               Contact
-            </Link>
+            </a>
           </div>
         </div>
       </nav>

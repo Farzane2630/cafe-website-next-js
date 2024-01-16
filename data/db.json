@@ -1,0 +1,174 @@
+{
+  "menu": [
+    {
+      "price": "5",
+      "src": "img/menu-1.jpg",
+      "title": "Black Coffee",
+      "details": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "offer": "",
+      "id": "1"
+    },
+    {
+      "price": "7",
+      "src": "img/menu-2.jpg",
+      "title": "Chocolete Coffee",
+      "details": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "offer": "",
+      "id": "2"
+    },
+    {
+      "price": "10",
+      "src": "img/menu-3.jpg",
+      "title": "Coffee With Milk",
+      "details": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "offer": "",
+      "id": "3"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "src": "img/service-1.jpg",
+      "title": "Fastest Door Delivery",
+      "details": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
+      "icon": "faTruck"
+    },
+    {
+      "id": "2",
+      "src": "img/service-2.jpg",
+      "title": "Fresh Coffee Beans",
+      "details": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
+      "icon": "faCoffee"
+    },
+    {
+      "id": "3",
+      "src": "img/service-3.jpg",
+      "title": "Best Quality Coffee",
+      "details": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
+      "icon": "faAward"
+    },
+    {
+      "id": "4",
+      "src": "img/service-4.jpg",
+      "title": "Online Table Booking",
+      "details": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
+      "icon": "faTable"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "src": "img/testimonial-1.jpg",
+      "userName": "Client Name",
+      "comment": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita!! :))",
+      "score": "4.2",
+      "productId": "1"
+    },
+    {
+      "id": "2",
+      "src": "img/testimonial-2.jpg",
+      "userName": "Client Name",
+      "comment": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita!! :))",
+      "score": "4.2",
+      "productId": "2"
+    },
+    {
+      "id": "3",
+      "src": "img/testimonial-3.jpg",
+      "userName": "Client Name",
+      "comment": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita!! :))",
+      "score": "4.2",
+      "productId": "3"
+    },
+    {
+      "id": "4",
+      "src": "img/testimonial-4.jpg",
+      "userName": "Client Name",
+      "comment": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita!! :))",
+      "score": "4.2",
+      "productId": "1"
+    }
+  ],
+  "offers": [],
+  "reservation": [
+    {
+      "id": "7d4b",
+      "name": "",
+      "emailOrPhone": "",
+      "date": "",
+      "time": "",
+      "person": 0
+    },
+    {
+      "id": "a425",
+      "name": "farzaneh",
+      "emailOrPhone": "farzanekazemi8517@gmail.com",
+      "date": "2024-01-24",
+      "time": "17:52",
+      "person": "3"
+    },
+    {
+      "id": "81c5",
+      "name": "Farzaneh",
+      "emailOrPhone": "farzanekazemi8517@gmail.com",
+      "date": "2024-01-27",
+      "time": "13:09",
+      "person": "3"
+    },
+    {
+      "id": "4634",
+      "name": "Kazemi",
+      "emailOrPhone": "farzanekazei8517@gmail.com",
+      "date": "2024-01-25",
+      "time": "19:30",
+      "person": "3"
+    },
+    {
+      "id": "c558",
+      "name": "Farzaneh",
+      "emailOrPhone": "farzanekazemi8517@gmail.com",
+      "date": "2024-01-26",
+      "time": "13:13",
+      "person": "4"
+    },
+    {
+      "id": "afbd",
+      "name": "taqi",
+      "emailOrPhone": "taqi@gmail.de",
+      "date": "2024-01-24",
+      "time": "18:15",
+      "person": "1"
+    },
+    {
+      "id": "fb41",
+      "name": "Kazemi",
+      "emailOrPhone": "09120738517",
+      "date": "2024-04-07",
+      "time": "21:30",
+      "person": "2"
+    },
+    {
+      "id": "1a2e",
+      "name": "فرزانه ",
+      "emailOrPhone": "farzanekazemi8517@gmail.com",
+      "date": "2024-01-17",
+      "time": "17:01",
+      "person": "3"
+    }
+  ],
+  "newsLetters": [
+    {
+      "id": "f83f",
+      "email": "translationworld.2019@Gmail.com"
+    }
+  ],
+  "messages": [
+    {
+      "id": "f6a1",
+      "name": "Farzaneh Kazemi",
+      "email": "farzanekazemi8517@gmail.com",
+      "subject": "",
+      "message": "fake Message!"
+    }
+  ]
+}

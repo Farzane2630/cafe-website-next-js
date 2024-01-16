@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ProductCard({src, price, productName, details}) {
+export default function ProductCard({src, price, title, details}) {
   return (
     <div className="row align-items-center mb-5">
                         <div className="col-4 col-sm-3">
@@ -8,7 +8,7 @@ export default function ProductCard({src, price, productName, details}) {
                             <h5 className="menu-price">$ {price}</h5>
                         </div>
                         <div className="col-8 col-sm-9">
-                            <h4>{productName}</h4>
+                            <h4>{title}</h4>
                             <p className="m-0">{details}</p>
                         </div>
                     </div>

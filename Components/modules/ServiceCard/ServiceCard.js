@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import * as Icons from "@fortawesome/free-solid-svg-icons";
 import React from 'react'
 
 export default function ServiceCard({src, title, details, icon}) {
@@ -16,7 +17,7 @@ export default function ServiceCard({src, title, details, icon}) {
         <h4>
           <div className="service-icon">
             <FontAwesomeIcon
-              icon={icon}
+              icon={Icons[icon]}
               className="fa fa-truck"
               size="sm"
             />
