@@ -25,7 +25,8 @@
 
 ## Screenshots
 🏠 homepage
-![screencapture-localhost-8080-2023-06-03-20_44_26](https://github.com/Farzane2630/vegeefood/assets/110881082/90d1cf01-e964-4049-b49f-a92d9af1837a)
+![Uploading screencapture-file-C-Users-farzane-AppData-Local-Temp-Rar-EXa21816-35198-index-html-2024-01-24-19_20_31.png…]()
+
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/github-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Farzane2630)
