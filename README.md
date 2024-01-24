@@ -25,8 +25,7 @@
 
 ## Screenshots
 🏠 homepage
-[![screencapture-file-C-Users-farzane-AppData-Local-Temp-Rar-EXa21816-35198-index-html-2024-01-24-19_20_31](https://github.com/Farzane2630/cafe-website-next-js/assets/110881082/1f54b116-762c-4343-9f34-a45c2b4e4a5c)
-]
+![screencapture-file-C-Users-farzane-AppData-Local-Temp-Rar-EXa21816-35198-index-html-2024-01-24-19_20_31](https://github.com/Farzane2630/cafe-website-next-js/assets/110881082/1f54b116-762c-4343-9f34-a45c2b4e4a5c)
 
 
 ## 🔗 Links
