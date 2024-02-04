@@ -15,7 +15,7 @@ export default function Testimonial({comments}) {
           <h1 className="display-4">Our Clients Say</h1>
         </div>
         <div className="owl-carousel testimonial-carousel">
-          {comments.map((comment, index) => (
+          {comments.slice(0,3).map((comment, index) => (
             <TestimonialCard key={index} {...comment} />
           ))}
         </div>

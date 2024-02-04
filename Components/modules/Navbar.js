@@ -1,16 +1,63 @@
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const {
+    register,
+    reset,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
+
+  const route = useRouter();
+
+  async function searchHandler(data) {
+    if (data.searchValue.trim()) {
+      route.push(`/search?q=${data.searchValue}`);
+      reset()
+    }
+    console.log(data.searchValue);
+  }
+
   return (
     <div className="container-fluid p-0 nav-bar">
       <nav className="navbar navbar-expand-lg bg-none navbar-dark py-3">
-        <a href="/" className="navbar-brand px-lg-4 m-0">
+        <Link href="/" className="navbar-brand px-lg-4 m-0">
           <h1 className="m-0 display-4 text-uppercase text-white">
             WELLCOME 👋
           </h1>
-        </a>
+        </Link>
+
+        <form onSubmit={handleSubmit(searchHandler)}>
+          <input
+            {...register("searchValue", { required: true })}
+            type="text"
+            style={{
+              border: "none",
+              outline: "none",
+              backgroundColor: "transparent",
+              color:"#fff"
+            }}
+            placeholder="Search..."
+          />
+          <button
+            type="submit"
+            style={{
+              border: "none",
+              outline: "none",
+              backgroundColor: "transparent",
+            }}
+          >
+            <FontAwesomeIcon color="#fff" icon={faSearch} />
+          </button>
+        </form>
+
         <button
           type="button"
           className="navbar-toggler"
@@ -24,18 +71,18 @@ export default function Navbar() {
           id="navbarCollapse"
         >
           <div className="navbar-nav ml-auto p-4">
-            <a href="/" className="nav-item nav-link active">
+            <Link href="/" className="nav-item nav-link active">
               Home
-            </a>
-            <a href="about" className="nav-item nav-link">
+            </Link>
+            <Link href="about" className="nav-item nav-link">
               About
-            </a>
-            <a href="service" className="nav-item nav-link">
+            </Link>
+            <Link href="service" className="nav-item nav-link">
               Service
-            </a>
-            <a href="menu" className="nav-item nav-link">
+            </Link>
+            <Link href="menu" className="nav-item nav-link">
               Menu
-            </a>
+            </Link>
             <div
               className="nav-item dropdown"
               onClick={() => setIsOpen(!isOpen)}
@@ -45,18 +92,18 @@ export default function Navbar() {
               </div>
               {isOpen ? (
                 <div className="dropdown-menu text-capitalize">
-                  <a href="reservation" className="dropdown-item">
+                  <Link href="reservation" className="dropdown-item">
                     Reservation
-                  </a>
-                  <a href="testimonial" className="dropdown-item">
+                  </Link>
+                  <Link href="testimonial" className="dropdown-item">
                     Testimonial
-                  </a>
+                  </Link>
                 </div>
               ) : null}
             </div>
-            <a href="contact" className="nav-item nav-link">
+            <Link href="contact" className="nav-item nav-link">
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

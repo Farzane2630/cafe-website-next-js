@@ -1,4 +1,4 @@
-import ProductCard from "@/Components/modules/ProductCard/ProductCard";
+import ProductCard from "@/Components/modules/Products/ProductCard";
 import React from "react";
 
 export default function Menu({products}) {
@@ -18,14 +18,16 @@ export default function Menu({products}) {
         <div className="row">
           <div className="col-lg-6">
             <h1 className="mb-5">Hot Coffee</h1>
-            {products.map((coffe, index) => (
-              <ProductCard key={index} {...coffe} />
+            {products.map((product, index) => (
+              product.type === "hot" && 
+              <ProductCard key={index} {...product} />
             ))}
           </div>
           <div className="col-lg-6">
             <h1 className="mb-5">Cold Coffee</h1>
-            {products.map((coffe, index) => (
-              <ProductCard key={index} {...coffe} />
+            {products.map((product, index) => (
+              product.type === "cold" && 
+              <ProductCard key={index} {...product} />
             ))}
           </div>
         </div>

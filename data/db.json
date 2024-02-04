@@ -1,28 +1,64 @@
 {
   "menu": [
     {
-      "price": "5",
-      "src": "img/menu-1.jpg",
+      "id": 1,
       "title": "Black Coffee",
-      "details": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "offer": "",
-      "id": "1"
+      "price": 5,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 5,
+      "off": 0,
+      "type": "cold",
+      "img": "/images/menu-1.jpg"
     },
     {
-      "price": "7",
-      "src": "img/menu-2.jpg",
-      "title": "Chocolete Coffee",
-      "details": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "offer": "",
-      "id": "2"
+      "id": 2,
+      "title": "Hot Chocolete",
+      "price": 4,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 4.4,
+      "off": 0,
+      "type": "hot",
+      "img": "/images/menu-2.jpg"
     },
     {
-      "price": "10",
-      "src": "img/menu-3.jpg",
-      "title": "Coffee With Milk",
-      "details": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "offer": "",
-      "id": "3"
+      "id": 3,
+      "title": "Ice Cream",
+      "price": 6,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 4.9,
+      "off": 0,
+      "type": "cold",
+      "img": "/images/menu-3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Tea",
+      "price": 3,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 5,
+      "off": 0,
+      "type": "hot",
+      "img": "/images/menu-4.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Chocolate Milk",
+      "price": 4,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 4.8,
+      "off": 50,
+      "type": "hot",
+      "img": "/images/menu-5.jpeg"
+    },
+    {
+      "id": 6,
+      "title": "Banana Milk",
+      "price": 12,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 4.9,
+      "off": 0,
+      "type": "cold",
+      "img": "/images/menu-6.jpeg"
     }
   ],
   "services": [
@@ -55,41 +91,12 @@
       "icon": "faTable"
     }
   ],
-  "comments": [
+  "offers": [
     {
-      "id": "1",
-      "src": "img/testimonial-1.jpg",
-      "userName": "Client Name",
-      "comment": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita!! :))",
-      "score": "4.2",
-      "productId": "1"
-    },
-    {
-      "id": "2",
-      "src": "img/testimonial-2.jpg",
-      "userName": "Client Name",
-      "comment": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita!! :))",
-      "score": "4.2",
-      "productId": "2"
-    },
-    {
-      "id": "3",
-      "src": "img/testimonial-3.jpg",
-      "userName": "Client Name",
-      "comment": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita!! :))",
-      "score": "4.2",
-      "productId": "3"
-    },
-    {
-      "id": "4",
-      "src": "img/testimonial-4.jpg",
-      "userName": "Client Name",
-      "comment": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita!! :))",
-      "score": "4.2",
-      "productId": "1"
+      "id": "b987",
+      "email": "jvjvjc"
     }
   ],
-  "offers": [],
   "reservation": [
     {
       "id": "7d4b",
@@ -169,6 +176,42 @@
       "email": "farzanekazemi8517@gmail.com",
       "subject": "",
       "message": "fake Message!"
+    }
+  ],"comments": [
+    {
+      "id": 1,
+      "username": "Q_Yolme",
+      "productID": 1,
+      "body": "Wonderful coffee ❤️",
+      "profile": "/images/testimonial-1.jpg"
+    },
+    {
+      "id": 2,
+      "username": "Amin Saeedi",
+      "productID": 2,
+      "body": "Perfect coffee 🙋‍♂️❤️",
+      "profile": "/images/testimonial-2.jpg"
+    },
+    {
+      "id": 3,
+      "username": "Sasan Moqaddas",
+      "productID": 1,
+      "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
+      "profile": "/images/testimonial-3.jpg"
+    },
+    {
+      "id": 4,
+      "username": "Alireza Rezaei",
+      "productID": 2,
+      "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
+      "profile": "/images/testimonial-4.jpg"
+    },
+    {
+      "id": 5,
+      "username": "Mmd Mohammadi",
+      "productID": 1,
+      "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
+      "profile": "/images/testimonial-4.jpg"
     }
   ]
 }

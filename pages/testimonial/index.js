@@ -12,6 +12,8 @@ export default function Testimonial({ comments }) {
   );
 }
 
+
+// ISR
 export async function getStaticProps() {
   const data = await fetch("http://localhost:4000/comments");
   const comments = await data.json();

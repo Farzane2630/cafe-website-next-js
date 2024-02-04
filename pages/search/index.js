@@ -1,7 +1,29 @@
-import React from 'react'
+import Header from "@/Components/modules/Header";
+import React from "react";
+import SearchResult from "@/Components/templates/SearchResult";
 
-export default function Search() {
+export default function Search(props) {
   return (
-    <div>Search</div>
-  )
+    <>
+      <Header prevPage="home" currentPage="search" />
+      <SearchResult searchResult={props.searchResult} />
+    </>
+  );
+}
+
+export async function getServerSideProps(context) {
+  const  {query} = context;
+
+  const res = await fetch("http://localhost:4000/menu");
+  const data = await res.json();
+  const searchResult = data.filter(
+    (item) =>
+      item.type.toLowerCase().includes(query.q.toLowerCase()) ||
+      item.title.toLowerCase().includes(query.q.toLowerCase()) 
+  );
+  return {
+    props: {
+      searchResult,
+    },
+  };
 }
