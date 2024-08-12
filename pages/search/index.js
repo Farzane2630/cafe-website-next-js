@@ -14,7 +14,7 @@ export default function Search(props) {
 export async function getServerSideProps(context) {
   const  {query} = context;
 
-  const res = await fetch("http://localhost:4000/menu");
+  const res = await fetch("https://json-server-vercel-liart-iota.vercel.app/menu");
   const data = await res.json();
   const searchResult = data.filter(
     (item) =>

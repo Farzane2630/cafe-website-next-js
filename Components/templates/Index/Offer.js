@@ -11,7 +11,7 @@ export default function Offer() {
   } = useForm();
 
   async function addEmail(data) {
-    const res = await fetch("http://localhost:4000/offers", {
+    const res = await fetch("https://json-server-vercel-liart-iota.vercel.app/offers", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

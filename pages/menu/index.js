@@ -14,7 +14,7 @@ export default function Menu({menu}) {
 
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:4000/menu");
+  const res = await fetch("https://json-server-vercel-liart-iota.vercel.app/menu");
   const menu = await res.json();
   return {
     props: {

@@ -10,7 +10,7 @@ export default function Reservation() {
   } = useForm();
 
   async function submitForm(data) {
-    const reserve = await fetch("http://localhost:4000/reservation", {
+    const reserve = await fetch("https://json-server-vercel-liart-iota.vercel.app/reservation", {
       method: "POST",
       body: JSON.stringify(data),
     });

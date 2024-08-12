@@ -9,7 +9,7 @@ export default function Contact() {
   } = useForm()
 
   async function sendMessage (data){
-    const res = await fetch('http://localhost:4000/messages',{
+    const res = await fetch('https://json-server-vercel-liart-iota.vercel.app/messages',{
       method: "POST",
       body: JSON.stringify(data)
     })

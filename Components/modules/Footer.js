@@ -21,7 +21,7 @@ export default function Footer() {
   } = useForm();
 
   async function addEmail(data) {
-    const res = await fetch("http://localhost:4000/newsLetters", {
+    const res = await fetch("https://json-server-vercel-liart-iota.vercel.app/newsLetters", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -15,7 +15,7 @@ export default function Testimonial({ comments }) {
 
 // ISR
 export async function getStaticProps() {
-  const data = await fetch("http://localhost:4000/comments");
+  const data = await fetch("https://json-server-vercel-liart-iota.vercel.app/comments");
   const comments = await data.json();
   return {
     props: {

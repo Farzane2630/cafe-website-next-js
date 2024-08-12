@@ -24,11 +24,11 @@ export default function Home({data}) {
 
 
 export async function getStaticProps (){
-const res = await fetch("http://localhost:4000/menu")
+const res = await fetch("https://json-server-vercel-liart-iota.vercel.app/menu")
 const menu = await res.json()
-const res1 = await fetch("http://localhost:4000/services")
+const res1 = await fetch("https://json-server-vercel-liart-iota.vercel.app/services")
 const services = await res1.json()
-const res2 = await fetch("http://localhost:4000/comments")
+const res2 = await fetch("https://json-server-vercel-liart-iota.vercel.app/comments")
 const comments = await res2.json()
   return{
     props:{
