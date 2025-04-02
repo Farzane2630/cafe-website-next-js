@@ -6,13 +6,17 @@ import {
   faMapMarkerAlt,
   faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF, faInstagram, faLinkedin, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import {
+  faFacebookF,
+  faInstagram,
+  faLinkedin,
+  faLinkedinIn,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 import { useForm } from "react-hook-form";
 import Form from "./Form/Form";
 
-
 export default function Footer() {
-
   const {
     register,
     handleSubmit,
@@ -21,13 +25,16 @@ export default function Footer() {
   } = useForm();
 
   async function addEmail(data) {
-    const res = await fetch("https://json-server-vercel-liart-iota.vercel.app/newsLetters", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    const res = await fetch(
+      "https://luck-clever-sunshine.glitch.me/newsLetters",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
 
     if (res.status === 201) {
       alert("🎉 You have Joined Successfully! ;)) ✔");
@@ -85,19 +92,28 @@ export default function Footer() {
               className="btn btn-lg btn-outline-light btn-lg-square mr-2"
               href="#"
             >
-              <FontAwesomeIcon icon={faFacebookF} className="fab fa-facebook-f" />
+              <FontAwesomeIcon
+                icon={faFacebookF}
+                className="fab fa-facebook-f"
+              />
             </Link>
             <Link
               className="btn btn-lg btn-outline-light btn-lg-square mr-2"
               href="#"
             >
-              <FontAwesomeIcon icon={faLinkedinIn} className="fab fa-linkedin-in" />
+              <FontAwesomeIcon
+                icon={faLinkedinIn}
+                className="fab fa-linkedin-in"
+              />
             </Link>
             <Link
               className="btn btn-lg btn-outline-light btn-lg-square"
               href="#"
             >
-              <FontAwesomeIcon icon={faInstagram} className="fab fa-instagram" />
+              <FontAwesomeIcon
+                icon={faInstagram}
+                className="fab fa-instagram"
+              />
             </Link>
           </div>
         </div>
@@ -124,12 +140,12 @@ export default function Footer() {
           </h4>
           <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
           <Form
-          submitForm={addEmail}
-          register={register}
-          handleSubmit={handleSubmit}
-          errors={errors}
-          reset={reset}
-        />
+            submitForm={addEmail}
+            register={register}
+            handleSubmit={handleSubmit}
+            errors={errors}
+            reset={reset}
+          />
         </div>
       </div>
       <div
@@ -153,4 +169,3 @@ export default function Footer() {
     </div>
   );
 }
-

@@ -11,7 +11,7 @@ export default function Offer() {
   } = useForm();
 
   async function addEmail(data) {
-    const res = await fetch("https://json-server-vercel-liart-iota.vercel.app/offers", {
+    const res = await fetch("https://luck-clever-sunshine.glitch.me/offers", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -12,10 +12,9 @@ export default function Testimonial({ comments }) {
   );
 }
 
-
 // ISR
 export async function getStaticProps() {
-  const data = await fetch("https://json-server-vercel-liart-iota.vercel.app/comments");
+  const data = await fetch("https://luck-clever-sunshine.glitch.me/comments");
   const comments = await data.json();
   return {
     props: {

@@ -6,11 +6,10 @@ import Services from "@/Components/templates/Index/Services";
 import Slider from "@/Components/templates/Index/Slider";
 import Testimonial from "@/Components/templates/Index/Testimonial";
 
-
-export default function Home({data}) {
+export default function Home({ data }) {
   return (
     <>
-     <Slider />
+      <Slider />
       <About />
       <Services services={data.services} />
       <Offer />
@@ -22,20 +21,21 @@ export default function Home({data}) {
   );
 }
 
-
-export async function getStaticProps (){
-const res = await fetch("https://json-server-vercel-liart-iota.vercel.app/menu")
-const menu = await res.json()
-const res1 = await fetch("https://json-server-vercel-liart-iota.vercel.app/services")
-const services = await res1.json()
-const res2 = await fetch("https://json-server-vercel-liart-iota.vercel.app/comments")
-const comments = await res2.json()
-  return{
-    props:{
-      data:{
-        menu, services, comments
-      }
+export async function getStaticProps() {
+  const res = await fetch("https://luck-clever-sunshine.glitch.me/menu");
+  const menu = await res.json();
+  const res1 = await fetch("https://luck-clever-sunshine.glitch.me/services");
+  const services = await res1.json();
+  const res2 = await fetch("https://luck-clever-sunshine.glitch.me/comments");
+  const comments = await res2.json();
+  return {
+    props: {
+      data: {
+        menu,
+        services,
+        comments,
+      },
     },
-    revalidate: 60 * 60 * 12 //per 12 hrs
-  }
+    revalidate: 60 * 60 * 12, //per 12 hrs
+  };
 }

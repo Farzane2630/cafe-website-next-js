@@ -1,18 +1,20 @@
 import Header from "@/Components/modules/Header";
 import React from "react";
-import {useForm} from "react-hook-form"
+import { useForm } from "react-hook-form";
 
 export default function Contact() {
   const {
-    register, reset, handleSubmit,
-    formState:{errors}
-  } = useForm()
+    register,
+    reset,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  async function sendMessage (data){
-    const res = await fetch('https://json-server-vercel-liart-iota.vercel.app/messages',{
+  async function sendMessage(data) {
+    const res = await fetch("https://luck-clever-sunshine.glitch.me/messages", {
       method: "POST",
-      body: JSON.stringify(data)
-    })
+      body: JSON.stringify(data),
+    });
 
     if (res.status === 201) {
       alert("✔ your Message is resieved successfully!");
@@ -27,7 +29,7 @@ export default function Contact() {
   return (
     <>
       <Header prevPage="Home" currentPage="Contact" />
-      
+
       <div className="container-fluid pt-5">
         <div className="container">
           <div className="section-title">
@@ -70,51 +72,59 @@ export default function Contact() {
             <div className="col-md-6 pb-5">
               <div className="contact-form">
                 <div id="success"></div>
-                <form
-                  onSubmit={handleSubmit(sendMessage)}
-                >
+                <form onSubmit={handleSubmit(sendMessage)}>
                   <div className="control-group">
                     <input
-                    {...register('name', {required: true})}
+                      {...register("name", { required: true })}
                       type="text"
                       className="form-control bg-transparent p-4"
                       placeholder="Your Name"
                       data-validation-required-message="Please enter your name"
                     />
                     <p className="help-block text-danger"></p>
-                    {errors.name && <p style={{background: "#fff"}}>❌ Name is required.</p>}
+                    {errors.name && (
+                      <p style={{ background: "#fff" }}>❌ Name is required.</p>
+                    )}
                   </div>
                   <div className="control-group">
                     <input
-                    {...register('email', {required: true})}
+                      {...register("email", { required: true })}
                       type="email"
                       className="form-control bg-transparent p-4"
                       placeholder="Your Email"
                       data-validation-required-message="Please enter your email"
                     />
                     <p className="help-block text-danger"></p>
-                    {errors.email && <p style={{background: "#fff"}}>❌ Email is required.</p>}
+                    {errors.email && (
+                      <p style={{ background: "#fff" }}>
+                        ❌ Email is required.
+                      </p>
+                    )}
                   </div>
                   <div className="control-group">
                     <input
-                    {...register('subject')}
+                      {...register("subject")}
                       type="text"
                       className="form-control bg-transparent p-4"
                       placeholder="Subject"
                       data-validation-required-message="Please enter a subject"
                     />
                     <p className="help-block text-danger"></p>
-                   </div>
+                  </div>
                   <div className="control-group">
                     <textarea
-                    {...register('message', {required: true})}
+                      {...register("message", { required: true })}
                       className="form-control bg-transparent py-3 px-4"
                       rows="5"
                       placeholder="Message"
                       data-validation-required-message="Please enter your message"
                     ></textarea>
                     <p className="help-block text-danger"></p>
-                    {errors.message && <p style={{background: "#fff"}}>❌ Please write a message.</p>}
+                    {errors.message && (
+                      <p style={{ background: "#fff" }}>
+                        ❌ Please write a message.
+                      </p>
+                    )}
                   </div>
                   <div>
                     <button

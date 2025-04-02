@@ -10,10 +10,13 @@ export default function Reservation() {
   } = useForm();
 
   async function submitForm(data) {
-    const reserve = await fetch("https://json-server-vercel-liart-iota.vercel.app/reservation", {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
+    const reserve = await fetch(
+      "https://luck-clever-sunshine.glitch.me/reservation",
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+      }
+    );
 
     if (reserve.status === 201) {
       alert("✔ your reservation is confirmed successfully!");
@@ -71,7 +74,9 @@ export default function Reservation() {
                       className="form-control bg-transparent border-primary p-4"
                       placeholder="Name"
                     />
-                    {errors.name && <p style={{background: "#fff"}}>Name is required.</p>}
+                    {errors.name && (
+                      <p style={{ background: "#fff" }}>Name is required.</p>
+                    )}
                   </div>
                   <div className="form-group">
                     <input
@@ -80,7 +85,11 @@ export default function Reservation() {
                       className="form-control bg-transparent border-primary p-4"
                       placeholder="Email or Phone"
                     />
-                    {errors.emailOrPhone && <p style={{background: "#fff"}}>Enter a phone or email.</p>}
+                    {errors.emailOrPhone && (
+                      <p style={{ background: "#fff" }}>
+                        Enter a phone or email.
+                      </p>
+                    )}
                   </div>
                   <div className="form-group">
                     <div className="date" id="date" data-target-input="nearest">
@@ -92,7 +101,9 @@ export default function Reservation() {
                         data-target="#date"
                         data-toggle="datetimepicker"
                       />
-                      {errors.date && <p style={{background: "#fff"}}>Date is required.</p>}
+                      {errors.date && (
+                        <p style={{ background: "#fff" }}>Date is required.</p>
+                      )}
                     </div>
                   </div>
                   <div className="form-group">
@@ -105,7 +116,9 @@ export default function Reservation() {
                         data-target="#time"
                         data-toggle="datetimepicker"
                       />
-                      {errors.time && <p style={{background: "#fff"}}>Time is required.</p>}
+                      {errors.time && (
+                        <p style={{ background: "#fff" }}>Time is required.</p>
+                      )}
                     </div>
                   </div>
                   <div className="form-group">

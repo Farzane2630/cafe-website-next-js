@@ -2,7 +2,7 @@ import Header from "@/Components/modules/Header";
 import ServiceComponnent from "@/Components/templates/Index/Services";
 import React from "react";
 
-export default function Service({services}) {
+export default function Service({ services }) {
   return (
     <>
       <Header prevPage="Home" currentPage="Service" />
@@ -12,7 +12,7 @@ export default function Service({services}) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("https://json-server-vercel-liart-iota.vercel.app/services");
+  const res = await fetch("https://luck-clever-sunshine.glitch.me/services");
   const services = await res.json();
   return {
     props: {

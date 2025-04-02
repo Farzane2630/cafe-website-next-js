@@ -24,7 +24,7 @@ export default function Product({ product, productComments }) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(`https://json-server-vercel-liart-iota.vercel.app/menu`);
+  const res = await fetch(`https://luck-clever-sunshine.glitch.me/menu`);
   const data = await res.json();
 
   const paths = data.map((product) => ({
@@ -42,10 +42,14 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { params } = context;
 
-  const res = await fetch(`https://json-server-vercel-liart-iota.vercel.app/menu/${params.id}`);
+  const res = await fetch(
+    `https://luck-clever-sunshine.glitch.me/menu/${params.id}`
+  );
   const product = await res.json();
 
-  const Comments = await fetch(`https://json-server-vercel-liart-iota.vercel.app/comments`);
+  const Comments = await fetch(
+    `https://luck-clever-sunshine.glitch.me/comments`
+  );
   const AllComments = await Comments.json();
 
   const productComments = AllComments.filter(
